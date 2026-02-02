@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.env
+
+# Models and Data (Quant Standards: usually we don't upload large weights to git)
+backend/saved_models/
+*.pkl
+*.pth
+*.json
+!backend/saved_models/.gitkeep
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Artifacts
+presentation/Bitcoin_Price_Prediction_Report.pdf

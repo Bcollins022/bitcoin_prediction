@@ -1,0 +1,15 @@
+yfinance
+pandas
+numpy
+scikit-learn
+xgboost
+torch
+streamlit
+plotly
+reportlab
+ta
+matplotlib
+statsmodels
+fastapi
+uvicorn
+pydantic

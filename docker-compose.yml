@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    container_name: bitcoin-api
+    environment:
+      - SERVICE_TYPE=api
+      - PORT=8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/saved_models:/app/backend/saved_models
+    restart: always
+
+  frontend:
+    build: .
+    container_name: bitcoin-frontend
+    environment:
+      - SERVICE_TYPE=frontend
+      - PORT=8501
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./backend/saved_models:/app/backend/saved_models
+    depends_on:
+      - api
+    restart: always
